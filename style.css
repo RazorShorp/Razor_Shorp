@@ -1,0 +1,438 @@
+/* Обнуление */
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    font-size: 20px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.bigred {
+    font-size: 20px;
+    color: red;
+}
+
+/* Общие стили для всех ссылок */
+a {
+    color: black;
+}
+
+/* Стили для шапки */
+header {
+	opacity: .7;
+    width: 100%;
+    height: 100%;
+    background: url('nathon-oski-EW_rqoSdDes-unsplash.jpg') center no-repeat;
+	background-size:cover;
+    text-align: center;
+    font: "Edvardian Script ITC";
+    font-size: 56px;
+}
+
+.header_content{
+	text-align: center;
+	top: 20%;
+	font-size: 72px;
+	color: black;
+}
+
+/* Стили для навигационной панели */
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    min-width: 0;
+    background-color: rgb(122, 118, 118);
+    color: white;
+    z-index: 1;
+}
+
+
+ .navigation_panel a{
+	top: 20px;
+ }
+
+#logo{
+	width: 100px;
+	height: 100px;
+	background: url('logo.png') 0 0 no-repeat;
+	background-size: cover;
+}
+
+/* Стили для контейнера с содержимым */
+.content {
+    background-color: rgb(255, 242, 216);
+    height: 300%;
+    width: 100%;
+	text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: stretch; 
+    background: url('backgraund_of_biggest_barber.jpeg') 0 0 no-repeat;
+    background-attachment: fixed;
+    opacity: 0.9;
+}
+
+/* Стили для блока с содержимым */
+.content_panel
+{
+    background-color: rgba(60, 60, 60, 0.877);
+    margin: 6%;
+    width: 81%;
+    min-height: 600px;
+    border-radius: 5%;
+    color: white;
+    padding: 40px;
+}
+
+/* Стили для всех элементов внутри блока с содержимым */
+.content_panel * {
+    margin: 10px;
+}
+
+/* Стили для заголовка, внутреннего содержимого и текста внутри блока с содержимым */
+.content_panel h1{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content_panel .content_in_panel{
+    padding: 20px;
+}
+
+.content_panel p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Стили для подвала */
+footer {
+    background-color: rgb(138, 138, 138);
+    height: 10%;
+    width: 100%;
+}
+
+/* Стили для слайдера и его элементов */
+.slider-container,
+.slide {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    position: absolute;
+}
+
+/* Стили для кнопок переключения слайдов (если нужны) */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Цвет фона кнопок */
+    padding: 10px; /* Отступ вокруг текста кнопок */
+    border: none; /* Убираем границу кнопок */
+    border-radius: 5px; /* Закругляем углы кнопок */
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+/* Стили для пагинации (если нужна) */
+.pagination {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pagination span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #aaa;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.pagination span.active {
+    background-color: #333;
+}
+
+/* Стили для слайдера в разделе GALLERY */
+.content_panel .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.content_panel .slide {
+    display: none;
+    width: 100%;
+    position: absolute;
+}
+
+.content_panel .prev,
+.content_panel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Цвет фона кнопок */
+    padding: 10px; /* Отступ вокруг текста кнопок */
+    border: none; /* Убираем границу кнопок */
+    border-radius: 5px; /* Закругляем углы кнопок */
+}
+
+.content_panel .next {
+    right: 10px;
+}
+
+.content_panel .prev {
+    left: 10px;
+}
+
+.content_panel .next:hover,
+.content_panel .prev:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Изменение цвета фона при наведении */
+}
+
+.content_panel .pagination {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content_panel .pagination span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #aaa;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.content_panel .pagination span.active {
+    background-color: #333;
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: -30px 0px 0px 0px;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 60px;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url('sl-arrow_l.svg') 0 0 / 100% no-repeat;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+    background: url('sl-arrow_r.svg') 0 0 / 100% no-repeat;
+}
+
+.slider {
+    position: relative;
+    padding: 0px 60px;
+    max-width: 1200px; /* Добавлено ограничение максимальной ширины слайдера */
+    margin: 0 auto; /* Центрирование слайдера на странице */
+}
+
+@media (max-width: 767px) {
+    .slider {
+        padding: 0px 40px;
+    }
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 60px;
+}
+
+
+.slider .slick-arrow.slick-disabled {
+    opacity: 0.2;
+}
+
+.slider .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Добавлен отступ сверху для точек */
+}
+
+.slider .slick-dots li {
+    list-style: none;
+    margin: 0px 5px; /* Уменьшен отступ между точками */
+}
+
+.slider .slick-dots button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.slider .slick-dots li.slick-active button {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.slider__item {
+    padding: 0px 15px;
+    box-sizing: border-box; /* Добавлено для правильного расчета размеров */
+}
+
+.slider__item img {
+    max-width: 100%;
+    height: auto; /* Автоматическое вычисление высоты */
+}
+
+/* Убираем стандартные стили Slick Slider */
+.slick-prev,
+.slick-next {
+    font-size: 0; /* Убираем текст стрелок */
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+
+p{
+	margin: 2% 6%;
+	font-size: 30;
+}
+
+.photo-block1{
+	background: url('michal-parzuchowski-ItaV89TNkks-unsplash.jpg') 0 0 no-repeat;
+	background-size: cover;
+}
+
+.photo-block2{
+	background: url('ante-samarzija-lsmu0rUhUOk-unsplash.jpg') 0 0 no-repeat;
+	background-size: cover;
+}
+
+.content_panel p{
+	font-size: 26px;
+}
+
+@media (max-width: 374px) {
+    p{
+        font-size: 8px;
+    }
+}
